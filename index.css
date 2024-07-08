@@ -1,0 +1,205 @@
+@font-face{
+    font-family: 'montserrat';
+    src: url('../assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf') format('truetype');
+
+}
+@font-face{
+  font-family: 'montserrat2';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+
+}
+@font-face{
+  font-family: 'montserrat3';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+
+}
+@font-face{
+    font-family: 'lato';
+    src: url('../assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
+
+}
+@font-face{
+    font-family: 'spaceMono';
+    src: url('../assets/fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+
+}
+.text{
+font-family: spaceMono;
+}
+.title{
+font-family:montserrat ;
+}
+.title2{
+  font-family:montserrat2 ;
+
+}
+.title3{
+  font-family:montserrat3 ;
+
+}
+.sub_titles{
+  font-family:lato ;
+
+}
+
+.hover-bold {
+    transition: font-weight 0.5s ease-in-out; /* Change 0.5s to desired delay time */
+}
+
+.hover-bold:hover {
+    font-weight: bold;
+}
+
+#tv_carusel {
+  
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+
+#tv_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#tv_carusel .tv_carusel_element {
+  white-space: nowrap;
+  animation: tv_carusel_element 60s linear infinite;
+  max-width: none;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: 1.5px dashed  black;
+  border-right:none ;
+  border-left:none ;
+
+
+  padding: 1rem;
+  z-index: 1; /* Ensure text is above the video */
+}
+
+@keyframes tv_carusel_element {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+
+
+}
+
+.vertical {
+   writing-mode: vertical-lr;
+   }
+
+
+
+
+
+   .d{outline: 1px solid red;}
+/* Base styles */
+.relative {
+  position: relative;
+}
+
+/* Hover effect container */
+.hover-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(0, 0, 0);
+  transition: height 0.2s ease-in-out;
+}
+
+/* Text inside hover effect */
+.hover-text {
+  padding-left: 10px;
+  width: 70%;
+}
+
+/* Button inside hover effect */
+.hover-button {
+  border-left: 1.5px solid black;
+  width: 30%;
+  height: 100%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* On hover, show the hover effect */
+.col-span-1:hover .hover-effect,
+.md\:col-span-2:hover .hover-effect,
+.md\:col-span-3:hover .hover-effect {
+  height: 20%;
+  border: 1.5px solid black;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+.notebook-bg {
+  background-image: 
+      linear-gradient(0deg, transparent 49%, rgba(0, 0, 0, 0.140)50%, rgba(0, 0, 0, 0.140)51%, transparent 52%, transparent 97%, rgba(0, 0, 0, 0.140)98%, rgba(0, 0, 0, 0.140) 99%, transparent),
+      linear-gradient(90deg, transparent 49%, rgba(0, 0, 0, 0.140)50%, rgba(0, 0, 0, 0.140)51%, transparent 52%, transparent 97%, rgba(0, 0, 0, 0.140)98%, rgba(0, 0, 0, 0.140)99%, transparent);
+  background-size: 20px 20px;
+}
+
+
+body{
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth; 
+}
+
+
+
+
+.counter-container {
+  font-size: 10rem; /* Set font size to 10rem */
+  width: full;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.counter-strip {
+  transition: transform 3.4s linear;
+}
+
+.counter-item {
+  height: 10rem; /* Set counter item height based on font size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inverted-video {
+  filter: invert(100%);
+  animation: fade 20s infinite;
+}
+
+@keyframes fade {
+  0%, 100% {
+    filter: invert(100%);
+  }
+  50% {
+    filter: invert(100%);
+
+  }
+}
