@@ -170,3 +170,24 @@ handleAOS();
 
 // Listen to resize events
 window.addEventListener('resize', handleAOS);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  function handleAOS() {
+    const mdBreakpoint = 768; // Adjust this value based on your definition of "md"
+    
+    if (window.innerWidth <= mdBreakpoint) {
+      document.querySelectorAll('[data-aos]').forEach(element => {
+        if ((!element.closest('.skills'))&(!element.closest('.counter-strip'))) {
+          element.removeAttribute('data-aos');
+        }
+      });
+    }
+  }
+
+  // Run on page load
+  handleAOS();
+
+  // Run on window resize
+  window.addEventListener('resize', handleAOS);
+});
