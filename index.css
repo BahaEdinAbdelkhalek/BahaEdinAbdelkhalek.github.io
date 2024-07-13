@@ -135,15 +135,15 @@ background-color: transparent;
 }
 
 .myImg {
-  animation: transitionIn 4s infinite;
+  animation: transitionIn 2s infinite;
 }
 
 @keyframes transitionIn {
   from {
-      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+      clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%); /* Bottom-left */
   }
   to {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%); /* Top-right */
   }
 }
 
