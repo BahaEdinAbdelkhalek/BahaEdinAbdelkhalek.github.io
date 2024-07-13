@@ -1,3 +1,23 @@
+// script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Wait for the window to load completely
+  window.addEventListener("load", function() {
+      // Hide the loading screen with a fade out effect
+      const loadingScreen = document.getElementById("loading-screen");
+      loadingScreen.style.opacity = "0"; // Fade out
+
+      setTimeout(() => {
+          loadingScreen.style.display = "none"; // Hide after fading
+          const mainContent = document.getElementById("main-content");
+          mainContent.style.display = "block"; // Show main content
+      }, 1000); // Match the duration of the CSS transition
+  });
+  
+});
+
+
+
 
 var elementToChange = document.getElementsByTagName("body")[0];
 elementToChange.style.cursor = "url('../assets/cursor.png'), auto";
