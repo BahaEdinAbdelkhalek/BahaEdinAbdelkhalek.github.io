@@ -52,44 +52,75 @@ font-family:montserrat ;
 
 
 
+#loading-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -16px;
+}
+.svg {
+  position: relative;
+  z-index: 10;
+  height: 40px;
+  -webkit-animation: bounce .5s cubic-bezier(0.51, 0.23, 0.02, 0.96) infinite;
+          animation: bounce .5s cubic-bezier(0.51, 0.23, 0.02, 0.96) infinite;
+}
+#loading-screen:after {
+  position: absolute;
+  bottom: 2px;
+  left: 20px;
+  display: block;
+  width: 22px;
+  height: 4px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 100%;
+  content: '';
+  -webkit-animation: shadow .5s infinite;
+          animation: shadow .5s infinite;
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.95, 1.1) translateY(-8px);
+            transform: scale(0.95, 1.1) translateY(-8px);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.95, 1.1) translateY(-8px);
+            transform: scale(0.95, 1.1) translateY(-8px);
+  }
+}
+@keyframes shadow {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.7, 1);
+            transform: scale(0.7, 1);
+    background: rgba(0,0,0,0.05);
+  }
+}
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.7, 1);
+            transform: scale(0.7, 1);
+    background: rgba(0,0,0,0.05);
+  }
+}
 
-
-        body, html {
-            margin: 0;
-padding: 0;
-        }
-        #loading-screen {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-        #main-content {
-            display: none;
-            padding: 20px;
-            color: #fff;
-        }
-        .progress-ring {
-            position: relative;
-            width: 200px;
-            height: 200px;
-        }
-        .progress-ring__circle {
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
-        .progress-ring__text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 48px;
-            font-weight: bold;
-            color: #fff;
-        }
 
 
 
