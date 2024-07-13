@@ -156,7 +156,7 @@ body {
 }
 
 /* Hide main content initially */
-#main-content {
+#main-content { 
   display: none;
 }
 
