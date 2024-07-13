@@ -142,6 +142,7 @@ body {
   animation: fade 1.5s infinite; /* Fade animation */
 }
 
+
 @keyframes fade {
   0%, 100% {
       opacity: 1; /* Fully visible */
