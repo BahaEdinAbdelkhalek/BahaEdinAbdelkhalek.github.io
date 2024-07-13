@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
           mainContent.style.display = "block"; // Show main content
       }, 1000); // Match the duration of the CSS transition
   });
+  
 });
 
 
