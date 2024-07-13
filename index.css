@@ -131,8 +131,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000; /* Ensure it covers the entire screen */
-  background-color: black;
-
+background-color: transparent;
 }
 
 .myImg {
