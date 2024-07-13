@@ -71,7 +71,7 @@ background-color: transparent;
 }
 
 .myImg {
-  animation: transitionIn 4s infinite;
+  animation: transitionIn 1.5s infinite;
 }
 
 @keyframes transitionIn {
