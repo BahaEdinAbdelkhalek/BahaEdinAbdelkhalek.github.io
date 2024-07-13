@@ -1,38 +1,20 @@
-window.addEventListener('load', function() {
-  const loadingScreen = document.getElementById('loading-screen');
-  const content = document.getElementById('content');
-  const progressRing = document.querySelector('.progress-ring__circle');
-  const progressText = document.querySelector('.progress-ring__text');
-  
-  const radius = progressRing.r.baseVal.value;
-  const circumference = radius * 2 * Math.PI;
-  
-  progressRing.style.strokeDasharray = `${circumference} ${circumference}`;
-  progressRing.style.strokeDashoffset = circumference;
-  
-  function setProgress(percent) {
-      const offset = circumference - percent / 100 * circumference;
-      progressRing.style.strokeDashoffset = offset;
-      progressText.textContent = `${Math.round(percent)}%`;
-  }
-  
-  let progress = 0;
-  function simulateLoading() {
-      if (progress < 100) {
-          progress += Math.random() * 3;
-          progress = Math.min(progress, 100);
-          setProgress(progress);
-          requestAnimationFrame(simulateLoading);
-      } else {
-          setTimeout(() => {
-              loadingScreen.style.display = 'none';
-              content.style.display = 'block';
-          }, 500);
-      }
-  }
-  
-  simulateLoading();
+// script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Wait for the window to load completely
+  window.addEventListener("load", function() {
+      // Hide the loading screen with a fade out effect
+      const loadingScreen = document.getElementById("loading-screen");
+      loadingScreen.style.opacity = "0"; // Fade out
+
+      setTimeout(() => {
+          loadingScreen.style.display = "none"; // Hide after fading
+          const mainContent = document.getElementById("main-content");
+          mainContent.style.display = "block"; // Show main content
+      }, 1000); // Match the duration of the CSS transition
+  });
 });
+
 
 
 const strip = document.getElementById('counterStrip');
