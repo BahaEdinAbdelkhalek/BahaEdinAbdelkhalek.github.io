@@ -132,7 +132,6 @@ body {
   align-items: center;
   z-index: 1000; /* Ensure it covers the entire screen */
   background-color: black;
-  mix-blend-mode: lighten;
 
 }
 
