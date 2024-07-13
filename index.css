@@ -139,7 +139,9 @@ body {
   width: 100px; /* Adjust size as needed */
   height: auto;
   opacity: 1;
-  animation: fade 1.5s infinite; /* Fade animation */
+  animation: fade 1.5s infinite;
+  background-color: black;
+   /* Fade animation */
 }
 
 
