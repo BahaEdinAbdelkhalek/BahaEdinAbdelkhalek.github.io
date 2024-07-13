@@ -145,6 +145,7 @@ body {
 }
 
 
+
 @keyframes fade {
   0%, 100% {
       opacity: 1; /* Fully visible */
