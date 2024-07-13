@@ -117,7 +117,7 @@ body {
 /* styles.css */
 
 body {
-  
+
   margin: 0;
 
 }
@@ -136,23 +136,16 @@ body {
 
 }
 
-/* Loading Image */
-.loading-img {
-  width: 100px; /* Adjust size as needed */
-  height: auto;
-  opacity: 1;
-  animation: fade 1.5s infinite;
-   /* Fade animation */
+.myImg {
+  animation: transitionIn 4s infinite;
 }
 
-
-
-@keyframes fade {
-  0%, 100% {
-      opacity: 1; /* Fully visible */
+@keyframes transitionIn {
+  from {
+    clip-path: polygon(0 0, 100% 0, 0 100% , 0 0);
   }
-  50% {
-      opacity: 0; /* Fully transparent */
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
