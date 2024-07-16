@@ -57,6 +57,9 @@ body {
   margin: 0;
 
 }
+img {
+  pointer-events: none;
+}
 
 /* Loading Screen */
 #loading-screen {
@@ -320,4 +323,5 @@ body{
 
   }
 }
+
 
