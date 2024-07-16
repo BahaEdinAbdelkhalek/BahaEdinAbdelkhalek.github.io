@@ -190,7 +190,7 @@ handleAOS();
 
 // Listen to resize events
 window.addEventListener('resize', handleAOS);
-
+/*
 
 document.addEventListener('DOMContentLoaded', function() {
   function handleAOS() {
@@ -211,3 +211,5 @@ document.addEventListener('DOMContentLoaded', function() {
   // Run on window resize
   window.addEventListener('resize', handleAOS);
 });
+
+*/
