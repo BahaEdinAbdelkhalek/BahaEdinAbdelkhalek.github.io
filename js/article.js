@@ -42,6 +42,7 @@ window.addEventListener('scroll', handleScroll);
 
 
 
+
 var elementToChange = document.getElementsByTagName("body")[0];
 elementToChange.style.cursor = "url('../assets/cursor.png'), auto";
 
