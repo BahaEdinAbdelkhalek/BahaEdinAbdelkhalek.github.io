@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(() => {
           loadingScreen.style.display = "none"; // Hide after fading
           const mainContent = document.getElementById("main-content");
-          mainContent.style.display = "flex"; // Show main content
+          mainContent.style.display = "block"; // Show main content
       }, 1000); // Match the duration of the CSS transition
   });
   
