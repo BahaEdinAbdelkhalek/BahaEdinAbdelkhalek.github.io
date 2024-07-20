@@ -32,13 +32,12 @@ function handleScroll() {
     const newHeight = initialHeight * Math.max(shrinkFactor, 0.4); // Limit to 40% of initial height
     shrinkingContainer.style.height = `${newHeight}px`;
   } else if (scrollPosition <= containerTop - windowHeight) {
-    // When the scroll position is at the top, reset the height to initial height
+    // When the scroll position is at or above the top, reset the height to initial height
     shrinkingContainer.style.height = `${initialHeight}px`;
   }
 }
 
 window.addEventListener('scroll', handleScroll);
-
 
 
 
