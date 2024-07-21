@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
 });
-/*
+
 
 const shrinkingContainer = document.getElementById('shrinkingContainer');
 const initialHeight = shrinkingContainer.offsetHeight;
@@ -41,7 +41,6 @@ window.addEventListener('scroll', handleScroll);
 
 
 
-*/
 
 
 var elementToChange = document.getElementsByTagName("body")[0];
