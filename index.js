@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.classList.add('inview2');
       } else {
+        
         entry.target.classList.remove('inview2');
       }
     });
