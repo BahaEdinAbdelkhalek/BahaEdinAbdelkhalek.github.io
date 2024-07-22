@@ -31,7 +31,7 @@ function handleScroll() {
     const scrollPercentage = (scrollPosition - (containerTop - windowHeight)) / (containerHeight + windowHeight);
     const shrinkFactor = 1 - (scrollPercentage * 0.6); // 20% shrink
     const newHeight = initialHeight * Math.max(shrinkFactor, 0.4); // Limit to 20% shrink
-    shrinkingContainer.style.height = ${newHeight}px;
+    shrinkingContainer.style.height = '${newHeight}px';
   }
 }
 
