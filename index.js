@@ -164,28 +164,3 @@ for (let element of elementsss) {
 }
 
 
-
-// JavaScript to automate transition delays for .appear2 items
-document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.appear2');
-  
-  
-  items.forEach((item, index) => {
-    // Apply a staggered delay based on the item's index
-    item.style.transitionDelay = `${0.1}s`;
-  });
-
-  const active = function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('inview2');
-      } else {
-        
-        entry.target.classList.remove('inview2');
-      }
-    });
-  }
-
-  const io2 = new IntersectionObserver(active);
-  items.forEach(item => io2.observe(item));
-});
