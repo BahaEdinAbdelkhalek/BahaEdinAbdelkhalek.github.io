@@ -164,62 +164,6 @@ for (let element of elementsss) {
 }
 
 
-
-/*Function to handle the removal and addition of data-aos attributes
-function handleAOS() {
-  const element1 = document.getElementById('aos-element-1');
-  const element2 = document.getElementById('aos-element-2');
-
-  // Check if the screen width is less than the md breakpoint (768px)
-  if (window.innerWidth < 768) {
-    // Remove the data-aos attribute for smaller screens
-    element1.removeAttribute('data-aos');
-    element2.removeAttribute('data-aos');
-  } else {
-    // Add the data-aos attributes for medium screens and larger
-    element1.setAttribute('data-aos', 'fade-up');
-    element2.setAttribute('data-aos', 'fade-up-right');
-  }
-
-  // Reinitialize AOS (if using the AOS library)
-  if (typeof AOS !== 'undefined') {
-    AOS.refresh();
-  }
-}
-
-// Initial check
-handleAOS();
-
-// Listen to resize events
-window.addEventListener('resize', handleAOS);
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  function handleAOS() {
-    const mdBreakpoint = 768; // Adjust this value based on your definition of "md"
-    
-    if (window.innerWidth <= mdBreakpoint) {
-      document.querySelectorAll('[data-aos]').forEach(element => {
-        if ((!element.closest('.skills'))&(!element.closest('.counter-strip'))) {
-          element.removeAttribute('data-aos');
-        }
-      });
-    }
-  }
-
-  // Run on page load
-  handleAOS();
-
-  // Run on window resize
-  window.addEventListener('resize', handleAOS);
-});
-
-*/
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
