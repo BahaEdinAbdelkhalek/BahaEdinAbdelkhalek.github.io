@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   items.forEach((item, index) => {
     // Apply a staggered delay based on the item's index
-    item.style.transitionDelay = `${0.1 * (index + 1)}s`;
+    item.style.transitionDelay = `${0.1}s`;
   });
 
   const active = function(entries) {
