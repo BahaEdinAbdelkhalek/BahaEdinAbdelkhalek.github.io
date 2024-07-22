@@ -203,7 +203,7 @@
             
             </button>
         </form>
-        
+
     </div>
 
     <div class="box    mb-1 border-[1.5px] border-black border-x-0 h-20 w-full flex justify-center items-center  mt-28">
@@ -215,15 +215,13 @@
     
     
 
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  ScrollReveal().reveal('.box', {
-    distance: '50px',
-    duration: 800,
-    easing: 'ease-in-out',
-    origin: 'bottom'
-  });
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script>
+    $('.box').waypoint(function() {
+      $(this.element).addClass('visible');
+    }, { offset: '75%' });
+  </script>
    
   <script src="../js/article.js"></script>
     <script>
