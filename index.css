@@ -94,7 +94,7 @@ background-color: transparent;
   height: 56px;
 }
 
-.spinner > div data-aos="zoom-out-up" {
+.spinner > div  {
   width: 100%;
   height: 100%;
   border-radius: 50%;
