@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
 });
-/*
+
+
 
 const shrinkingContainer = document.getElementById('shrinkingContainer');
 const initialHeight = shrinkingContainer.offsetHeight;
@@ -28,18 +29,13 @@ function handleScroll() {
 
   if (scrollPosition > containerTop - windowHeight && scrollPosition < containerTop + containerHeight) {
     const scrollPercentage = (scrollPosition - (containerTop - windowHeight)) / (containerHeight + windowHeight);
-    const shrinkFactor = 1 - (scrollPercentage * 0.6); // 60% shrink
-    const newHeight = initialHeight * Math.max(shrinkFactor, 0.4); // Limit to 40% of initial height
-    shrinkingContainer.style.height = `${newHeight}px`;
-  } else if (scrollPosition <= containerTop - windowHeight) {
-    // When the scroll position is at or above the top, reset the height to initial height
-    shrinkingContainer.style.height = `${initialHeight}px`;
+    const shrinkFactor = 1 - (scrollPercentage * 0.6); // 20% shrink
+    const newHeight = initialHeight * Math.max(shrinkFactor, 0.4); // Limit to 20% shrink
+    shrinkingContainer.style.height = ${newHeight}px;
   }
 }
 
 window.addEventListener('scroll', handleScroll);
-
-*/
 
 
 
