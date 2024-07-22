@@ -166,14 +166,24 @@ for (let element of elementsss) {
 
 
 
-document.addEventListener('scroll', function () {
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
   const elements = document.querySelectorAll('.scroll-animate');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              // Optionally, unobserve after adding the class
+              observer.unobserve(entry.target);
+          }
+      });
+  }, {
+      threshold: 0.1 // Adjust as needed
+  });
+
   elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-      el.classList.add('visible');
-    } else {
-      el.classList.remove('visible');
-    }
+      observer.observe(el);
   });
 });
