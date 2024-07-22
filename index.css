@@ -325,11 +325,3 @@ body{
 
   }
 }
-
-.box {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-.box.visible {
-  opacity: 1;
-}
