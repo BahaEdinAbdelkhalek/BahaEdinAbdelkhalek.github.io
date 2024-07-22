@@ -165,7 +165,7 @@ for (let element of elementsss) {
 
 
 
-// Function to handle the removal and addition of data-aos attributes
+/*Function to handle the removal and addition of data-aos attributes
 function handleAOS() {
   const element1 = document.getElementById('aos-element-1');
   const element2 = document.getElementById('aos-element-2');
@@ -214,3 +214,4 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', handleAOS);
 });
 
+*/
