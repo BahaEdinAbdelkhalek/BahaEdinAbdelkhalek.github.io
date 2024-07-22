@@ -163,7 +163,6 @@ for (let element of elementsss) {
   });
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
   let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -177,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.35 });
+  }, { threshold: 0.75 });
 
   document.querySelectorAll('.box').forEach((box) => {
     observer.observe(box);
