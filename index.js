@@ -35,7 +35,7 @@ function startAnimation() {
     animationTriggered = true;
     setTimeout(() => {
       strip.style.transform = 'translateY(-120rem)'; // 12 * 60px
-    }, 200); // 0.4s delay
+    }, 300); // 0.4s delay
   }
 }
 
