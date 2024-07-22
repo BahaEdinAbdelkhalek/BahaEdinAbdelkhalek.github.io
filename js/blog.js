@@ -36,7 +36,7 @@ function resetCursor(element) {
 
 
 // Get all elements you want to apply this effect to
-// For example, let's apply it to all div elements
+// For example, let's apply it to all div data-aos="zoom-out-up" elements
 const elements = document.getElementsByTagName('a');
 
 // Loop through each element and add event listeners
@@ -54,7 +54,7 @@ for (let element of elements) {
 
 
 // Get all elements you want to apply this effect to
-// For example, let's apply it to all div elements
+// For example, let's apply it to all div data-aos="zoom-out-up" elements
 const elementss = document.getElementsByTagName('input');
 
 // Loop through each element and add event listeners
@@ -72,7 +72,7 @@ for (let element of elementss) {
 
 
 // Get all elements you want to apply this effect to
-// For example, let's apply it to all div elements
+// For example, let's apply it to all div data-aos="zoom-out-up" elements
 const elementsss = document.getElementsByTagName('button');
 
 // Loop through each element and add event listeners
