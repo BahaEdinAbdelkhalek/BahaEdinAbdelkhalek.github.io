@@ -169,6 +169,7 @@ for (let element of elementsss) {
 document.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll('.appear2');
   
+  
   items.forEach((item, index) => {
     // Apply a staggered delay based on the item's index
     item.style.transitionDelay = `${0.1 * (index + 1)}s`;
