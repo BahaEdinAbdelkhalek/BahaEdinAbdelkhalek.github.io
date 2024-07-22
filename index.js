@@ -163,3 +163,17 @@ for (let element of elementsss) {
   });
 }
 
+
+
+
+document.addEventListener('scroll', function () {
+  const elements = document.querySelectorAll('.scroll-animate');
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
+});
