@@ -215,3 +215,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 */
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  const observer = new IntersectionObserver((entries) => {
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const isScrollingDown = currentScrollTop > lastScrollTop;
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting && isScrollingDown) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.35 });
+
+  document.querySelectorAll('.box').forEach((box) => {
+    observer.observe(box);
+  });
+});
