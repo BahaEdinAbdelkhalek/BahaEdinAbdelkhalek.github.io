@@ -167,9 +167,9 @@ for (let element of elementsss) {
 // script.js
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".fade-up", {
+gsap.to(". ", {
     scrollTrigger: {
-        trigger: ".fade-up",
+        trigger: ". ",
         start: "top 75%", // Animation starts when the div is 75% from the top of the viewport
         end: "bottom 25%", // Animation ends when the div is 25% from the bottom of the viewport
         toggleActions: "play none play none", // What happens on enter, leave, enter back, and leave back
