@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   },
                   opacity: 1,
                   y: 0,
+                  
                  
                   duration: 0.5,
               
