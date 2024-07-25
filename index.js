@@ -172,7 +172,7 @@ gsap.to(".fade-up", {
         trigger: ".fade-up",
         start: "top 75%", // Animation starts when the div is 75% from the top of the viewport
         end: "bottom 25%", // Animation ends when the div is 25% from the bottom of the viewport
-        toggleActions: "play none none none", // What happens on enter, leave, enter back, and leave back
+        toggleActions: "play none play none", // What happens on enter, leave, enter back, and leave back
     },
     opacity: 1,
     y: 0,
