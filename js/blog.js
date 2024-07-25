@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
       loadingScreen.style.opacity = "0"; // Fade out
 
       setTimeout(() => {
+     
+      
           loadingScreen.style.display = "none"; // Hide after fading
           const mainContent = document.getElementById("main-content");
           mainContent.style.display = "block"; // Show main content
@@ -86,3 +88,4 @@ for (let element of elementsss) {
     resetCursor(this);
   });
 }
+

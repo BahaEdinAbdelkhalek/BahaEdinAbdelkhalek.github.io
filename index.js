@@ -1,40 +1,92 @@
 // script.js
-
-
-// script.js
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to(".fade-up", {
-    scrollTrigger: {
-        trigger: ".fade-up",
-        start: "top 75%", // Animation starts when the div is 75% from the top of the viewport
-        end: "bottom 25%", // Animation ends when the div is 25% from the bottom of the viewport
-        toggleActions: "play none play none", // What happens on enter, leave, enter back, and leave back
-    },
-    opacity: 1,
-    y: 0,
-    duration: 1, // Animation duration in seconds
-    ease: "power2.out" // Easing function
-});
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
-  // Wait for the window to load completely
-  window.addEventListener("load", function() {
-      // Hide the loading screen with a fade out effect
-      const loadingScreen = document.getElementById("loading-screen");
-      loadingScreen.style.opacity = "0"; // Fade out
+  gsap.registerPlugin(ScrollTrigger);
 
-      setTimeout(() => {
-          loadingScreen.style.display = "none"; // Hide after fading
-          const mainContent = document.getElementById("main-content");
-          mainContent.style.display = "block"; // Show main content
-      }, 1000); // Match the duration of the CSS transition
-  });
-  
+  // Hide the loading screen
+  const loadingScreen = document.getElementById("loading-screen");
+  loadingScreen.style.opacity = "0";
+  setTimeout(() => {
+      loadingScreen.style.display = "none";
+      const mainContent = document.getElementById("main-content");
+      mainContent.style.display = "block";
+      
+      // Set up scroll animations
+      setupScrollAnimations();
+  }, 1000);
+
+  function setupScrollAnimations() {
+      gsap.utils.toArray(".fade-up").forEach(function(elem,index) {
+          gsap.fromTo(elem, 
+              {
+                  opacity: 0,
+                  y: 50
+              },
+              {
+                  scrollTrigger: {
+                      trigger: elem,
+                      start: "top 120%",
+                      end: "bottom 70%",
+                      toggleActions: "play none none none",
+                     // Remove in production
+                  },
+                  opacity: 1,
+                  y: 0,
+                 
+                  duration: 0.5,
+              
+                  delay:index * 0.05,
+                  ease: "power2.out"
+              }
+          );
+      });
+
+      gsap.utils.toArray(".fade-right").forEach(function(elem,index) {
+          gsap.fromTo(elem, 
+              {
+                  opacity: 0,
+                  x: 50
+              },
+              {
+                  scrollTrigger: {
+                      trigger: elem,
+                      start: "top 90%",
+                      end: "bottom 70%",
+                      toggleActions: "play none none none",
+                 // Remove in production
+                  },
+                  opacity: 1,
+                  x: 0,
+                  duration: 0.5,
+                  delay:index * 0.05,
+                  ease: "power2.out"
+              }
+          );
+      });
+      gsap.utils.toArray(".fade-left").forEach(function(elem,index) {
+        gsap.fromTo(elem, 
+            {
+                opacity: 0,
+                x: 50
+            },
+            {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 120%",
+                    end: "bottom 70%",
+                    toggleActions: "play none none none",
+               // Remove in production
+                },
+                opacity: 1,
+                x: 0,
+                duration: 0.5,
+                delay:index * 0.05,
+                ease: "power2.out"
+            }
+        );
+    });
+
+  }
 });
-
 
 
 const strip = document.getElementById('counterStrip');
@@ -93,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function animation(currentTime) {
           if (startTime === null) startTime = currentTime;
           const timeElapsed = currentTime - startTime;
-          const duration = 1500; // Animation duration in milliseconds (2 seconds)
+          const duration = 20; // Animation duration in milliseconds (2 seconds)
           const run = ease(timeElapsed, startPosition, distance, duration);
           window.scrollTo(0, run);
           if (timeElapsed < duration) requestAnimationFrame(animation);
@@ -181,6 +233,4 @@ for (let element of elementsss) {
     resetCursor(this);
   });
 }
-
-
 

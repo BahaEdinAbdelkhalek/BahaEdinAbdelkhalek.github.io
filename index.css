@@ -301,7 +301,7 @@ body{
 }
 
 .counter-strip {
-  transition: transform 3.4s linear;
+  transition: transform 1.4s linear ;
 }
 
 .counter-item {
@@ -329,7 +329,19 @@ body{
 
 /* styles.css */
 .fade-up{
-  opacity: 0 ;
-  transform: translateY(50vh);
+  opacity: 0.99 ;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+/* styles.css */
+.fade-right{
+  opacity: 0.99 ;
+  transform: translateX(100px);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.fade-left{
+  opacity: 0.99 ;
+  transform: translateX(-100px);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
