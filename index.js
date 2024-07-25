@@ -1,5 +1,24 @@
 // script.js
 
+
+// script.js
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".fade-up", {
+    scrollTrigger: {
+        trigger: ".fade-up",
+        start: "top 75%", // Animation starts when the div is 75% from the top of the viewport
+        end: "bottom 25%", // Animation ends when the div is 25% from the bottom of the viewport
+        toggleActions: "play none play none", // What happens on enter, leave, enter back, and leave back
+    },
+    opacity: 1,
+    y: 0,
+    duration: 1, // Animation duration in seconds
+    ease: "power2.out" // Easing function
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   // Wait for the window to load completely
   window.addEventListener("load", function() {
@@ -164,18 +183,4 @@ for (let element of elementsss) {
 }
 
 
-// script.js
-gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(". ", {
-    scrollTrigger: {
-        trigger: ". ",
-        start: "top 75%", // Animation starts when the div is 75% from the top of the viewport
-        end: "bottom 25%", // Animation ends when the div is 25% from the bottom of the viewport
-        toggleActions: "play none play none", // What happens on enter, leave, enter back, and leave back
-    },
-    opacity: 1,
-    y: 0,
-    duration: 1, // Animation duration in seconds
-    ease: "power2.out" // Easing function
-});

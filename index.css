@@ -329,7 +329,7 @@ body{
 
 /* styles.css */
 .fade-up{
-  opacity: 0.4;
-  transform: translateY(100px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  opacity: 0 ;
+  transform: translateY(50vh);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
