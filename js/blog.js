@@ -1,21 +1,91 @@
 // script.js
-
 document.addEventListener("DOMContentLoaded", function() {
-  // Wait for the window to load completely
-  window.addEventListener("load", function() {
-      // Hide the loading screen with a fade out effect
-      const loadingScreen = document.getElementById("loading-screen");
-      loadingScreen.style.opacity = "0"; // Fade out
+  gsap.registerPlugin(ScrollTrigger);
 
-      setTimeout(() => {
-     
+  // Hide the loading screen
+  const loadingScreen = document.getElementById("loading-screen");
+  loadingScreen.style.opacity = "0";
+  setTimeout(() => {
+      loadingScreen.style.display = "none";
+      const mainContent = document.getElementById("main-content");
+      mainContent.style.display = "block";
       
-          loadingScreen.style.display = "none"; // Hide after fading
-          const mainContent = document.getElementById("main-content");
-          mainContent.style.display = "block"; // Show main content
-      }, 1000); // Match the duration of the CSS transition
-  });
-  
+      // Set up scroll animations
+      setupScrollAnimations();
+  }, 1000);
+
+  function setupScrollAnimations() {
+      gsap.utils.toArray(".fade-up").forEach(function(elem,index) {
+          gsap.fromTo(elem, 
+              {
+                  opacity: 0,
+                  y: 50
+              },
+              {
+                  scrollTrigger: {
+                      trigger: elem,
+                      start: "top 120%",
+                      end: "bottom 70%",
+                      toggleActions: "play none none none",
+                     // Remove in production
+                  },
+                  opacity: 1,
+                  y: 0,
+                  
+                 
+                  duration: 0.5,
+              
+                  delay:index * 0.05,
+                  ease: "power2.out"
+              }
+          );
+      });
+
+      gsap.utils.toArray(".fade-right").forEach(function(elem) {
+          gsap.fromTo(elem, 
+              {
+                  opacity: 0,
+                  x: 50
+              },
+              {
+                  scrollTrigger: {
+                      trigger: elem,
+                      start: "top 90%",
+                      end: "bottom 70%",
+                      toggleActions: "play none none none",
+                 // Remove in production
+                  },
+                  opacity: 1,
+                  x: 0,
+                  duration: 0.5,
+                  
+                  ease: "power2.out"
+              }
+          );
+      });
+      gsap.utils.toArray(".fade-left").forEach(function(elem) {
+        gsap.fromTo(elem, 
+            {
+                opacity: 0,
+                x: 50
+            },
+            {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 120%",
+                    end: "bottom 70%",
+                    toggleActions: "play none none none",
+               // Remove in production
+                },
+                opacity: 1,
+                x: 0,
+                duration: 0.5,
+                ease: "power2.out"
+            }
+        );
+    });
+
+  }
 });
 
 
