@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
               {
                   scrollTrigger: {
                       trigger: elem,
-                      start: "top 120%",
+                      start: "top 160%",
                       end: "bottom 70%",
                       toggleActions: "play none none none",
                      // Remove in production
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
                  
                   duration: 0.5,
               
-                  delay:index * 0.05,
+                  delay:index * 0.01,
                   ease: "power2.out"
               }
           );
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
               {
                   scrollTrigger: {
                       trigger: elem,
-                      start: "top 90%",
+                      start: "top 130%",
                       end: "bottom 70%",
                       toggleActions: "play none none none",
                  // Remove in production
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   opacity: 1,
                   x: 0,
                   duration: 0.5,
-                  delay:index * 0.05,
+                  delay:index * 0.01,
                   ease: "power2.out"
               }
           );
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
             {
                 scrollTrigger: {
                     trigger: elem,
-                    start: "top 120%",
+                    start: "top 140%",
                     end: "bottom 70%",
                     toggleActions: "play none none none",
                // Remove in production
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 opacity: 1,
                 x: 0,
                 duration: 0.5,
-                delay:index * 0.05,
+                delay:index * 0.01,
                 ease: "power2.out"
             }
         );

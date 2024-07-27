@@ -40,9 +40,52 @@ document.addEventListener("DOMContentLoaded", function() {
               }
           );
       });
+      gsap.utils.toArray(".fade-right").forEach(function(elem,index) {
+        gsap.fromTo(elem, 
+            {
+                opacity: 0,
+                x: 50
+            },
+            {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 90%",
+                    end: "bottom 70%",
+                    toggleActions: "play none none none",
+               // Remove in production
+                },
+                opacity: 1,
+                x: 0,
+                duration: 0.5,
+                delay:index * 0.05,
+                ease: "power2.out"
+            }
+        );
+    });
+    gsap.utils.toArray(".fade-left").forEach(function(elem,index) {
+      gsap.fromTo(elem, 
+          {
+              opacity: 0,
+              x: 50
+          },
+          {
+              scrollTrigger: {
+                  trigger: elem,
+                  start: "top 120%",
+                  end: "bottom 70%",
+                  toggleActions: "play none none none",
+             // Remove in production
+              },
+              opacity: 1,
+              x: 0,
+              duration: 0.5,
+              delay:index * 0.05,
+              ease: "power2.out"
+          }
+      );
+  });
 
-     
-  }
+}
 });
 
 

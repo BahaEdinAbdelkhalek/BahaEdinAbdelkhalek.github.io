@@ -14,7 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
       setupScrollAnimations();
       const shrinkingContainer = document.getElementById('shrinkingContainer');
 const initialHeight = shrinkingContainer.offsetHeight;
-
+gsap.to(".circle", {
+  duration: 2,
+  scale: 1.05,
+  boxShadow: "0 0 7px 3.5px rgba(45, 195, 40, 0.7), 0 0 7px 3.5px rgba(45, 195, 40, 0.1)",
+  repeat: -1,
+  yoyo: true,
+  ease: "power2.inOut"
+});
 // Initialize GSAP
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +39,7 @@ gsap.to(shrinkingContainer, {
   }, 1000);
 
   function setupScrollAnimations() {
-      gsap.utils.toArray(".fade-up").forEach(function(elem,index) {
+      gsap.utils.toArray(".fade-up").forEach(function(elem) {
           gsap.fromTo(elem, 
               {
                   opacity: 0,
@@ -41,7 +48,7 @@ gsap.to(shrinkingContainer, {
               {
                   scrollTrigger: {
                       trigger: elem,
-                      start: "top 120%",
+                      start: "top 150%",
                       end: "bottom 70%",
                       toggleActions: "play none none none",
                      // Remove in production
@@ -52,7 +59,7 @@ gsap.to(shrinkingContainer, {
                  
                   duration: 0.5,
               
-                  delay:index * 0.05,
+                  
                   ease: "power2.out"
               }
           );

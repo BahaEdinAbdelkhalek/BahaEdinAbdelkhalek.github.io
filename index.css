@@ -331,7 +331,7 @@ body{
 .fade-up{
   opacity: 1 ;
   transform: translateY(10px);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  transition: opacity 0.05s ease-out, transform 0.05s ease-out;
 }
 /* styles.css */
 .fade-right{
@@ -345,3 +345,10 @@ body{
   transform: translateX(-100px);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
+
+   .circle {
+    
+      background-color: #32CD32; /* LimeGreen color */
+      border-radius: 50%;
+      box-shadow: 0 0 15px #32CD32;
+    }
