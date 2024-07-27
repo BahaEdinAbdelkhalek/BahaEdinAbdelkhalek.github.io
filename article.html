@@ -171,45 +171,7 @@
  <li class="   my-2 underline underline-offset-4 "><a href="https://www.forbes.com/advisor/business/data-privacy/" target="_blank">Forbes: Data Privacy: What You Need to Know</a></li>
 </ul>
 
-    <!-- Comment Section -->
-    <div   class="     md:w-8/12 w-11/12  mx-auto my-12">
-        <h2 class="   text-2xl title2 text-boldermb-4">Comments</h2>
-        <div   id="comments" class="   my-12">
-          <div   class="     w-[98%]  mx-auto my-4 overflow-hidden">
-            <div   class="     py-4">
-              <!-- Header: Name and Date -->
-              <div   class="     flex justify-between items-center mb-4">
-                <h3 class="   text-lg font-semibold text-gray-800 title3 ">John Doe</h3>
-                <span class="   text-sm text-gray-500 text">June 30, 2024</span>
-              </div>
-              
-              <!-- Comment Text -->
-              <p class="   text-gray-600 text">
-                This is the comment text. It can be multiple lines long and will wrap as needed. The container will expand to fit the content while maintaining the overall width set by the parent.
-              </p>
-            </div>
-             
-          </div>
-        </div>
-
-
-        <form id="commentForm" class="   w-full  py-12">
-            <div   class="     mb-4">
-                <label for="commentName" class="   block text-sm title3 font-bold text-gray-900">Name</label>
-                <input type="text" id="commentName" class="   mt-1 p-2 w-full border-b-[1.5px] border-black  focus:outline-none  mb-4  text md:text-xs " required>
-            </div>
-            <div   class="     mb-4">
-                <label for="commentText" class="   block text-sm font-bold title3  ">Comment</label>
-                <textarea id="commentText" class="   mt-1 p-2 w-full border-b-[1.5px] border-black  focus:outline-none  mb-4  text md:text-xs " rows="4" required></textarea>
-            </div>
-            <button type="submit" class="   hover-bold    flex items-center justify-center ">
-              <span class="   text   h-5/6 ">Submit</span>
-         
-            
-            </button>
-        </form>
-
-    </div>
+  
 
     <div   class="       mb-1 border-[1.5px] border-black border-x-0 h-20 w-full flex justify-center items-center  mt-28">
       <span class="   text text-center">Copyright © 2024  Baha edin Abdelkhalke</span>
@@ -223,23 +185,7 @@
 
    
   <script src="../js/article.js"></script>
-    <script>
-        document.getElementById('commentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('commentName').value;
-            const comment = document.getElementById('commentText').value;
-
-            const commentSection = document.getElementById('comments');
-            const newComment = document.createElement('div');
-            newComment.classList.add('p-4', 'border-t', 'border-gray-300');
-            newComment.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
-
-            commentSection.appendChild(newComment);
-
-            document.getElementById('commentForm').reset();
-        });
-
-    </script>
+   
     <script src="./js/article.js"></script>
 </body>
 </html>
