@@ -203,7 +203,9 @@ img {
   object-fit: cover;
   z-index: -1;
 }
-
+body{
+zoom: 100%;
+}
 #tv_carusel .tv_carusel_element {
   white-space: nowrap;
   animation: tv_carusel_element 60s linear infinite;
